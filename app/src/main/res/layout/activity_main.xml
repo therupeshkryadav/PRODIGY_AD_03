@@ -1,0 +1,79 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/stopwatch_heading"
+        android:layout_width="200dp"
+        android:layout_height="100dp"
+        android:text="Stopwatch"
+        android:textSize="40sp"
+        android:textStyle="italic"
+        android:textColor="#BB12D8"
+        android:layout_marginTop="16dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+    <!-- Round Watch Face -->
+    <RelativeLayout
+        android:id="@+id/round_watch"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:layout_centerInParent="true"
+        android:background="@drawable/round_background"
+        android:elevation="4dp"
+        android:gravity="center">
+
+        <!-- Time Display in the center of the round watch -->
+        <TextView
+            android:id="@+id/time_display"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="00:00:00"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            android:textColor="@android:color/black" />
+    </RelativeLayout>
+
+    <!-- Buttons at the bottom -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="16dp"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <ImageButton
+            android:id="@+id/start_button"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginEnd="16dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="@string/start"
+            android:scaleType="centerInside"
+            android:src="@drawable/start"/>
+
+        <ImageButton
+            android:id="@+id/stop_button"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:src="@drawable/stop"
+            android:contentDescription="@string/stop"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:scaleType="centerInside"
+            android:layout_marginEnd="16dp"
+            android:layout_marginStart="16dp" />
+
+        <ImageButton
+            android:id="@+id/reset_button"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:src="@drawable/reset"
+            android:contentDescription="@string/reset"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:scaleType="centerInside"
+            android:layout_marginStart="16dp" />
+    </LinearLayout>
+</RelativeLayout>
